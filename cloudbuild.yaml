@@ -8,11 +8,4 @@ steps:
   - ssh
   - docker-webapp
   - --zone=us-central1-a
-  - --command=|
-      if [ ! -d git-dockerwebapp ]; then
-        git clone https://github.com/gopiguddeti1405-hue/git-dockerwebapp.git
-      fi
-      cd git-dockerwebapp
-      git pull
-      chmod +x deploy.sh
-      ./deploy.sh
+  - --command=if [ ! -d git-dockerwebapp ]; then git clone https://github.com/gopiguddeti1405-hue/git-dockerwebapp.git; fi && cd git-dockerwebapp && git pull && chmod +x deploy.sh && ./deploy.sh
