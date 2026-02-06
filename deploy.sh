@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd simple-docker-web
+cd git-dockerwebapp
 
 docker stop web || true
 docker rm web || true
